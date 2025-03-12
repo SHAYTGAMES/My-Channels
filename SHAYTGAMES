@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAYTGAMES</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+        }
+        #main-content {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to bottom, #ff5e62, #ff9800);
+            min-height: 100vh;
+        }
+        .channel {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            transition: filter 0.3s;
+        }
+        .channel img {
+            width: 100px;
+            height: 100px;
+        }
+        .channel:hover {
+            filter: brightness(150%);
+        }
+        #twitter:hover { filter: hue-rotate(90deg) brightness(150%); }
+        #youtube:hover { filter: hue-rotate(0deg) brightness(150%); }
+        #instagram:hover { filter: hue-rotate(270deg) brightness(150%); }
+        .menu-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        #menu-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            z-index: 1001;
+        }
+        #menu-screen p {
+            font-size: 1.2em;
+        }
+        #menu-screen a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+        #licenses {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">Caricamento...</div>
+    <div id="main-content">
+        <div class="menu-toggle">☰</div>
+        <h1>All SHAYTGAMES Channels</h1>
+        <div class="channel" id="twitter">
+            <a href="https://x.com/SHAYTGAMES" target="_blank">
+                <img src="https://via.placeholder.com/100?text=Twitter+X" alt="Twitter">
+            </a>
+        </div>
+        <div class="channel" id="youtube">
+            <a href="https://youtube.com/@SHAYTGAMES" target="_blank">
+                <img src="https://via.placeholder.com/100?text=YouTube" alt="YouTube">
+            </a>
+        </div>
+        <div class="channel" id="instagram">
+            <a href="https://instagram.com/shaytgames" target="_blank">
+                <img src="https://via.placeholder.com/100?text=Instagram" alt="Instagram">
+            </a>
+        </div>
+    </div>
+    <div id="menu-screen">
+        <p>SHAYTGAMES is a Content Creator who brings content to Youtube, Twitter (X) and Instagram about the video game company "Rockstar Games" <a href="https://socialclub.rockstargames.com/" target="_blank">say you can go to the site directly if you click on it</a>. SHAYTGAMES brings content such as Playlist in Walkthrough, Videos and much more. Follow me on the following channels and thank you for viewing the channel.</p>
+        <div id="licenses">
+            <p>Licenses protected by SHAYTGAMES: (Youtube: <a href="https://youtube.com/@SHAYTGAMES" target="_blank">youtube.com/@SHAYTGAMES</a>); (X: <a href="https://x.com/SHAYTGAMES" target="_blank">x.com/SHAYTGAMES</a>); (Instagram: <a href="https://instagram.com/shaytgames" target="_blank">instagram.com/shaytgames</a>)</p>
+        </div>
+    </div>
+
+    <script>
+        // Simula il caricamento di 3 secondi
+        setTimeout(function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 3000);
+
+        // Gestione del menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu-screen').style.display = 'block';
+        });
+
+        // Chiudi il menu se si clicca fuori (opzionale)
+        document.getElementById('menu-screen').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
