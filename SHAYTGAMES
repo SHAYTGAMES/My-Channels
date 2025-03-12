@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,7 +85,7 @@
     </style>
 </head>
 <body>
-    <div id="loading-screen">Caricamento...</div>
+    <div id="loading-screen">Loading...</div>
     <div id="main-content">
         <div class="menu-toggle">☰</div>
         <h1>All SHAYTGAMES Channels</h1>
@@ -106,25 +106,25 @@
         </div>
     </div>
     <div id="menu-screen">
-        <p>SHAYTGAMES is a Content Creator who brings content to Youtube, Twitter (X) and Instagram about the video game company "Rockstar Games" <a href="https://socialclub.rockstargames.com/" target="_blank">say you can go to the site directly if you click on it</a>. SHAYTGAMES brings content such as Playlist in Walkthrough, Videos and much more. Follow me on the following channels and thank you for viewing the channel.</p>
+        <p>SHAYTGAMES is a Content Creator who brings content to YouTube, Twitter (X), and Instagram about the video game company "Rockstar Games" <a href="https://socialclub.rockstargames.com/" target="_blank">say you can go to the site directly if you click on it</a>. SHAYTGAMES brings content such as Playlists in Walkthroughs, Videos, and much more. Follow me on the following channels and thank you for viewing the channel.</p>
         <div id="licenses">
-            <p>Licenses protected by SHAYTGAMES: (Youtube: <a href="https://youtube.com/@SHAYTGAMES" target="_blank">youtube.com/@SHAYTGAMES</a>); (X: <a href="https://x.com/SHAYTGAMES" target="_blank">x.com/SHAYTGAMES</a>); (Instagram: <a href="https://instagram.com/shaytgames" target="_blank">instagram.com/shaytgames</a>)</p>
+            <p>Licenses protected by SHAYTGAMES: (YouTube: <a href="https://youtube.com/@SHAYTGAMES" target="_blank">youtube.com/@SHAYTGAMES</a>); (X: <a href="https://x.com/SHAYTGAMES" target="_blank">x.com/SHAYTGAMES</a>); (Instagram: <a href="https://instagram.com/shaytgames" target="_blank">instagram.com/shaytgames</a>)</p>
         </div>
     </div>
 
     <script>
-        // Simula il caricamento di 3 secondi
+        // Simulate 3-second loading screen
         setTimeout(function() {
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('main-content').style.display = 'block';
         }, 3000);
 
-        // Gestione del menu
+        // Menu toggle functionality
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.getElementById('menu-screen').style.display = 'block';
         });
 
-        // Chiudi il menu se si clicca fuori (opzionale)
+        // Close menu if clicked outside (optional)
         document.getElementById('menu-screen').addEventListener('click', function(e) {
             if (e.target === this) {
                 this.style.display = 'none';
